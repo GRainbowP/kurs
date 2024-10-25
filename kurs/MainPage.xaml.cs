@@ -16,7 +16,7 @@ namespace kurs
         private void CurrencyClicked(object sender, EventArgs e)
         {
             string dateSelected = date.Date.ToString("yyyy-MM-dd");
-            string currency = currencyValue.Text;
+            string currency = currencyValue.Text.ToLower();
             string url = $"https://api.nbp.pl/api/exchangerates/rates/c/{currency}/{dateSelected}/?format=json";
             string json;
 
